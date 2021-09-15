@@ -20,7 +20,10 @@
           <ion-label position="floating">Confirmar nueva contraseña</ion-label>
           <ion-input type="password" [(ngModel)] = "confirm_clave"></ion-input>
         </ion-item>
-        <ion-button (click) = "resetearClave()"> Restrablecer</ion-button>
+        <ion-item>
+          <ion-button (click) = "resetearClave()"> Restrablecer</ion-button>
+        </ion-item>
+        <a color="primary" class="underline" routerLink = "/iniciar-sesion">Volver a Login</a>
       </ion-card-content>
     </ion-card>
   </div>
