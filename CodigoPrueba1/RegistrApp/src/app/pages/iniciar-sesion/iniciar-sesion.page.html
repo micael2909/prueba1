@@ -8,15 +8,20 @@
       </ion-card-header>
 
       <ion-card-content>
+        <ion-badge color= "danger" [hidden] = error_usuario>{{texto_error}}</ion-badge>
         <ion-item>
           <ion-label position="floating">Nombre de Usuario</ion-label>
-          <ion-input [(ngModel)] = "n_usuario"></ion-input>
+          <ion-input type= "text" [(ngModel)] = "n_usuario"></ion-input>
         </ion-item>
+        
         <ion-item>
           <ion-label position="floating">Contraseña</ion-label>
-          <ion-input [(ngModel)] = "password"></ion-input>
+          <ion-input type="password" [(ngModel)] = "password"></ion-input>
         </ion-item>
-        <ion-button (click) = "validarUsuario()"> Iniciar Sesión</ion-button>
+        <ion-item>
+          <ion-button (click) = "validarUsuario_clave()"> Iniciar Sesión</ion-button>
+        </ion-item>
+        <a color="primary" class="underline" routerLink = "/reset-pass">Reestablecer Contraseña</a>
       </ion-card-content>
     </ion-card>
   </div>

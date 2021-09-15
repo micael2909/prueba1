@@ -10,9 +10,17 @@
       <ion-card-content>
         <ion-item>
           <ion-label position="floating">Nombre de Usuario</ion-label>
-          <ion-input [(ngModel)] = "n_usuario"></ion-input>
+          <ion-input type="text" [(ngModel)] = "nom_usuario"></ion-input>
         </ion-item>
-        <ion-button (click) = "validarUsuario()"> Restrablecer</ion-button>
+        <ion-item>
+          <ion-label position="floating">Nueva contraseña</ion-label>
+          <ion-input type="password" [(ngModel)] = "nueva_clave"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Confirmar nueva contraseña</ion-label>
+          <ion-input type="password" [(ngModel)] = "confirm_clave"></ion-input>
+        </ion-item>
+        <ion-button (click) = "resetearClave()"> Restrablecer</ion-button>
       </ion-card-content>
     </ion-card>
   </div>
